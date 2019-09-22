@@ -18,31 +18,43 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.turnOff = QtWidgets.QPushButton(self.centralwidget)
-        self.turnOff.setGeometry(QtCore.QRect(80, 220, 201, 61))
+        self.turnOff.setGeometry(QtCore.QRect(80, 270, 201, 61))
         self.turnOff.setStyleSheet("background-color:#373E3E;\n"
 "font: 16px serif;\n"
 "color:#C4C4C4;")
         self.turnOff.setObjectName("turnOff")
         self.cancel = QtWidgets.QPushButton(self.centralwidget)
-        self.cancel.setGeometry(QtCore.QRect(80, 310, 201, 61))
+        self.cancel.setGeometry(QtCore.QRect(80, 360, 201, 61))
         self.cancel.setStyleSheet("background-color:#373E3E;\n"
 "font: 16px serif;\n"
 "color:#C4C4C4;")
         self.cancel.setObjectName("cancel")
         self.timer = QtWidgets.QTextEdit(self.centralwidget)
-        self.timer.setGeometry(QtCore.QRect(80, 110, 201, 31))
+        self.timer.setGeometry(QtCore.QRect(80, 80, 201, 31))
         self.timer.setStyleSheet("background-color: #7C8383;\n"
 "font: 16px serif;")
         self.timer.setObjectName("timer")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(110, 70, 141, 31))
+        self.textBrowser.setGeometry(QtCore.QRect(110, 40, 141, 31))
         self.textBrowser.setStyleSheet("background-color:#101212;\n"
 "border: no")
         self.textBrowser.setObjectName("textBrowser")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(320, 450, 47, 13))
+        self.label.setObjectName("label")
+        self.hours = QtWidgets.QRadioButton(self.centralwidget)
+        self.hours.setGeometry(QtCore.QRect(80, 140, 201, 21))
+        self.hours.setStyleSheet("color:#C4C4C4;")
+        self.hours.setObjectName("hours")
+        self.minutes = QtWidgets.QRadioButton(self.centralwidget)
+        self.minutes.setGeometry(QtCore.QRect(80, 180, 201, 21))
+        self.minutes.setStyleSheet("color:#C4C4C4;")
+        self.minutes.setObjectName("minutes")
+        self.seconds = QtWidgets.QRadioButton(self.centralwidget)
+        self.seconds.setGeometry(QtCore.QRect(80, 220, 201, 21))
+        self.seconds.setStyleSheet("color:#C4C4C4;")
+        self.seconds.setObjectName("seconds")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -63,3 +75,7 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color:#ffffff;\">Set your time here</span></p></body></html>"))
+        self.label.setText(_translate("MainWindow", "© Kotik"))
+        self.hours.setText(_translate("MainWindow", "HOURS"))
+        self.minutes.setText(_translate("MainWindow", "MINUTES"))
+        self.seconds.setText(_translate("MainWindow", "SECONDS"))

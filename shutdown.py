@@ -11,12 +11,20 @@ class shutApp(QtWidgets.QMainWindow, shutGUI.Ui_MainWindow):
         self.cancel.clicked.connect(self.off)
 
     def down(self):
-        seconds = str(int(self.timer.toPlainText()) * 3600)
+        if self.seconds.isChecked():
+            seconds = str(int(self.timer.toPlainText()))
+        elif self.minutes.isChecked():
+            seconds = str(int(self.timer.toPlainText()) * 60)
+        elif self.hours.isChecked():
+            seconds = str(int(self.timer.toPlainText()) * 3600)
         sp.call(['shutdown', '-f', '-s', '-t', seconds])
     
     def off(self):
         sp.call(['shutdown', '/a'])
         
+
+    
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
